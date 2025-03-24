@@ -29,5 +29,6 @@ emtk --index 0 \
     --mnemonic "wear crucial left gorilla zebra child similar salmon seed survey artwork invite digital giggle enjoy"
 ```
 
-The keystore will be saved to `--output-dir` with a UUID filename (*without* a
-`.json` extension).
+The `--index`'th address will be derived from the `--mnemonic`. The resulting
+keystore will be saved to `--output-dir` with a UUID filename (*without* a
+`.json` extension). The keystore will be encrypted with `--password`.
