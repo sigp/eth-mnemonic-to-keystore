@@ -1,0 +1,10 @@
+[package]
+name = "emtk"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.32", features = ["derive"] }
+alloy-signer-local = { version = "0.12.6", features = ["keystore", "mnemonic"] }
+rand = "0.8.5"
+zeroize = { version = "1.8.1", features = ["zeroize_derive"] }
