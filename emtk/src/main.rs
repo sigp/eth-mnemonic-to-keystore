@@ -53,7 +53,7 @@ fn main_fallible() -> Result<(), String> {
         .map_err(|e| format!("Unable to build keystore from mnemonic: {e}"))?;
 
     let mut rng = thread_rng();
-    PrivateKeySigner::encrypt_keystore(
+    let (_keystore, path) = PrivateKeySigner::encrypt_keystore(
         &output_dir,
         &mut rng,
         wallet.to_bytes(),
@@ -61,6 +61,8 @@ fn main_fallible() -> Result<(), String> {
         None,
     )
     .map_err(|e| format!("Unable to build keystore: {e}"))?;
+
+    print!("{path}");
 
     Ok(())
 }

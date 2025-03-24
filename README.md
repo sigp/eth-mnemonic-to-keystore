@@ -36,6 +36,8 @@ The `--index`'th address will be derived from the `--mnemonic`. The resulting
 keystore will be saved to `--output-dir` with a UUID filename (*without* a
 `.json` extension). The keystore will be encrypted with `--password`.
 
+The UUID filename will be output to stdout.
+
 ## Cross-Compilation
 
 Cross-compilation is provided via [`cross`](https://github.com/cross-rs/cross/)
