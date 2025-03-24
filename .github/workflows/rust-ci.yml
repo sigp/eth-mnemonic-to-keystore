@@ -18,6 +18,7 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2
       - name: Run tests
+        working-directory: ./emtk
         run: cargo test --all-features
 
   audit:
@@ -29,6 +30,7 @@ jobs:
       - name: Install cargo-audit
         run: cargo install cargo-audit
       - name: Run cargo-audit
+        working-directory: ./emtk
         run: cargo audit
 
   clippy:
@@ -41,4 +43,5 @@ jobs:
           components: clippy
       - uses: Swatinem/rust-cache@v2
       - name: Run clippy
+        working-directory: ./emtk
         run: cargo clippy --all-targets --all-features -- -D warnings
