@@ -2,6 +2,8 @@
 
 A simple CLI utility for generated an encrypted keystore from a mnemonic.
 
+This tool has not been audited by Sigma Prime. Use at your own risk.
+
 ## Features
 
 - Based on [`alloy`](https://docs.rs/alloy/latest/alloy/).
