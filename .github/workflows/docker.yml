@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - docker-builds
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -16,6 +17,7 @@ env:
     DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
     IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/emtk
 
+jobs:
     build-docker:
       name: build-docker
       runs-on: ubuntu-24.04
